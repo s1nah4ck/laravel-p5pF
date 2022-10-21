@@ -19,6 +19,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::apiResource('posts', PostController::class);
+Route::apiResource('posts', PostController::class)
+->only(['index','show','destroy','store'])
+->middleware('auth:sanctum');
 
 Route::post('login', [App\Http\Controllers\Api\LoginController::class, 'login']);
