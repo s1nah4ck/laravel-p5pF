@@ -9,11 +9,11 @@ use Illuminate\Http\Request;
 
  /**
         * @OA\Post(
-        * path="/api/register",
-        * operationId="Register",
-        * tags={"Register"},
-        * summary="User Register",
-        * description="User Register here",
+        * path="/api/posts",
+        * operationId="Post",
+        * tags={"Post"},
+        * summary="Post Created",
+        * description="Posts Created",
         *     @OA\RequestBody(
         *         @OA\JsonContent(),
         *         @OA\MediaType(
